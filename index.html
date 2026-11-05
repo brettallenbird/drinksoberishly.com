@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drink Soberishly by Brett Allen Bird</title>
+  <meta name="description" content="Two drinks and done? I'd have taken that. I got something better. How trying to drink less turned into not wanting it at all. Ebook and paperback out Jan 5, 2027.">
+  <meta name="author" content="Brett Allen Bird">
+  <link rel="canonical" href="https://drinksoberishly.com/">
+  <link rel="icon" href="assets/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/favicon-64.png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="book">
+  <meta property="og:url" content="https://drinksoberishly.com/">
+  <meta property="og:title" content="Drink Soberishly by Brett Allen Bird">
+  <meta property="og:description" content="Two drinks and done? I'd have taken that. I got something better. How trying to drink less turned into not wanting it at all.">
+  <meta property="og:image" content="https://drinksoberishly.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Drink Soberishly">
+  <meta property="book:author" content="Brett Allen Bird">
+  <meta property="book:release_date" content="2027-01-05">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Drink Soberishly by Brett Allen Bird">
+  <meta name="twitter:description" content="Two drinks and done? I'd have taken that. I got something better.">
+  <meta name="twitter:image" content="https://drinksoberishly.com/assets/og-image.jpg">
+  <meta name="twitter:site" content="@brettallenbird">
+
+  <style>
+    :root {
+      --navy: #16213E;
+      --navy-deep: #0F1830;
+      --yellow: #FAC81E;
+      --yellow-soft: #FBD95A;
+      --cream: #F7F1E3;
+      --cream-dark: #EDE4D0;
+      --red: #C0392B;
+      --red-deep: #9B2C20;
+      --ink: #1A1A1A;
+      --muted: #4A5568;
+      --white: #FFFFFF;
+      --max: 1080px;
+      --radius: 14px;
+      --shadow: 0 18px 40px rgba(15, 24, 48, 0.22);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    a { color: var(--navy); }
+    a:hover { color: var(--red); }
+
+    .wrap {
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+    }
+
+    /* Top bar */
+    .topbar {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 0.7rem 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+    }
+    .topbar .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .topbar a {
+      color: var(--yellow);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .topbar a:hover { color: var(--yellow-soft); }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(ellipse at 20% 0%, rgba(250, 200, 30, 0.18), transparent 55%),
+        linear-gradient(165deg, var(--navy) 0%, var(--navy-deep) 70%, #1a0f18 100%);
+      color: var(--cream);
+      padding: 2.5rem 0 3rem;
+    }
+    .hero-grid {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+    }
+    .cover-wrap {
+      justify-self: center;
+      width: min(280px, 70vw);
+      filter: drop-shadow(0 22px 35px rgba(0,0,0,0.45));
+    }
+    .cover-wrap img {
+      border-radius: 6px;
+      width: 100%;
+    }
+    .hero-copy h1 {
+      font-size: clamp(2.1rem, 6vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--yellow);
+      margin-bottom: 0.55rem;
+    }
+    .hero-copy .subtitle {
+      font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+      color: var(--cream);
+      opacity: 0.92;
+      margin-bottom: 0.85rem;
+      max-width: 28ch;
+    }
+    .hero-copy .byline {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(247, 241, 227, 0.7);
+      margin-bottom: 1.25rem;
+    }
+    .hook {
+      font-size: clamp(1.2rem, 3vw, 1.55rem);
+      font-style: italic;
+      color: var(--white);
+      border-left: 4px solid var(--yellow);
+      padding-left: 1rem;
+      margin: 1.25rem 0 1.75rem;
+      max-width: 32ch;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.9rem 1.45rem;
+      border: 2px solid transparent;
+      transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+    .btn-primary:hover {
+      background: var(--yellow-soft);
+      color: var(--navy);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--cream);
+      border-color: rgba(247, 241, 227, 0.35);
+    }
+    .btn-ghost:hover {
+      border-color: var(--yellow);
+      color: var(--yellow);
+    }
+    .preorder-note {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.85rem;
+      color: rgba(247, 241, 227, 0.65);
+      margin-top: 0.85rem;
+    }
+
+    /* Sections */
+    section { padding: 3rem 0; }
+    .section-title {
+      font-size: clamp(1.55rem, 3.5vw, 2rem);
+      color: var(--navy);
+      margin-bottom: 1.1rem;
+      letter-spacing: -0.01em;
+    }
+    .lead {
+      font-size: 1.12rem;
+      max-width: 58ch;
+    }
+    .lead p + p { margin-top: 1rem; }
+
+    .story {
+      background: var(--cream);
+    }
+
+    .for-you {
+      background: var(--cream-dark);
+    }
+    .for-you ul {
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+    .for-you li {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem 1rem 1.15rem;
+      border-left: 5px solid var(--yellow);
+      box-shadow: 0 4px 14px rgba(22, 33, 62, 0.06);
+      font-size: 1.05rem;
+    }
+    .for-you li::before {
+      content: "";
+    }
+
+    .quotes {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 2.75rem 0;
+    }
+    .quote-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    .quote-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(250, 200, 30, 0.28);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+    }
+    .quote-card p {
+      font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+      font-style: italic;
+      color: var(--yellow);
+      line-height: 1.35;
+    }
+
+    .release {
+      background: var(--cream);
+    }
+    .release-card {
+      background: var(--white);
+      border-radius: calc(var(--radius) + 4px);
+      box-shadow: var(--shadow);
+      padding: 1.75rem 1.5rem;
+      border-top: 6px solid var(--red);
+      max-width: 640px;
+    }
+    .release-card h2 { margin-bottom: 0.75rem; }
+    .release-card .date {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.85rem;
+    }
+    .prices {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1.1rem 0 1.35rem;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+    .price-pill {
+      background: var(--cream-dark);
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 0.55rem 1rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .price-pill span {
+      color: var(--red);
+      margin-left: 0.35rem;
+    }
+    .placeholder-btn {
+      opacity: 0.92;
+      cursor: default;
+      position: relative;
+    }
+    .placeholder-btn .soon {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--red);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 0.15rem 0.5rem;
+      margin-left: 0.35rem;
+      vertical-align: middle;
+    }
+
+    .author {
+      background: linear-gradient(180deg, var(--cream-dark), var(--cream));
+    }
+    .author-grid {
+      display: grid;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .author-mark {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--yellow);
+      box-shadow: 0 8px 20px rgba(22, 33, 62, 0.18);
+    }
+    .author-mark img { width: 100%; height: 100%; object-fit: cover; }
+    .author p { max-width: 60ch; margin-top: 0.75rem; }
+    .author .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.35rem;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--navy);
+      color: var(--cream);
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.65rem 1.05rem;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .chip:hover { background: var(--red); color: var(--white); }
+    .chip.alt {
+      background: var(--white);
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+    .chip.alt:hover {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      color: var(--navy);
+    }
+
+    .newsletter {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 2.5rem 0;
+    }
+    .newsletter h2 { color: var(--yellow); margin-bottom: 0.65rem; }
+    .newsletter p { max-width: 52ch; opacity: 0.92; margin-bottom: 1.2rem; }
+
+    footer {
+      background: var(--navy-deep);
+      color: rgba(247, 241, 227, 0.7);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 0.88rem;
+      padding: 1.5rem 0 2rem;
+      text-align: center;
+    }
+    footer a { color: var(--yellow); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer .fine {
+      margin-top: 0.65rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.35rem 0.85rem;
+      line-height: 1.6;
+    }
+    footer .fine .dot { display: none; }
+    .btn { text-align: center; white-space: normal; }
+    .placeholder-btn { max-width: 100%; }
+
+    @media (min-width: 760px) {
+      .hero { padding: 3.5rem 0 4rem; }
+      .hero-grid {
+        grid-template-columns: 300px 1fr;
+        gap: 3rem;
+      }
+      .cover-wrap { width: 300px; justify-self: start; }
+      .quote-grid { grid-template-columns: 1fr 1fr; }
+      .author-grid {
+        grid-template-columns: 110px 1fr;
+        gap: 1.75rem;
+      }
+      .release-card { padding: 2rem 2.1rem; }
+    }
+
+    @media (min-width: 980px) {
+      .hero-grid {
+        grid-template-columns: 340px 1fr;
+      }
+      .cover-wrap { width: 340px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Drink Soberishly &middot; out Jan 5, 2027</span>
+      <a href="#preorder">Get the book</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-wrap">
+        <img
+          src="assets/cover-800.jpg"
+          width="800"
+          height="1280"
+          alt="Drink Soberishly book cover: a guy with an NA banana can, about to step on a little devil">
+      </div>
+      <div class="hero-copy">
+        <h1>Drink Soberishly</h1>
+        <p class="subtitle">How Trying to Drink Less Turned Into Not Wanting It at All</p>
+        <p class="byline">by Brett Allen Bird</p>
+        <p class="hook">Two drinks and done? I'd have taken that. I got something better.</p>
+        <div class="cta-row">
+          <!-- PREORDER_LINK: replace href="#preorder" with the Amazon Kindle pre-order URL when it goes live -->
+          <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HQFQPNTW" id="preorder-cta" target="_blank" rel="noopener">Pre-order on Amazon</a>
+          <a class="btn btn-ghost" href="#about">About the book</a>
+        </div>
+        <p class="preorder-note">Kindle pre-order is open now. Ebook and paperback both drop Tue Jan 5, 2027.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="story" id="about">
+      <div class="wrap lead">
+        <h2 class="section-title">What if trying to drink less ended with not wanting it at all?</h2>
+        <p>For thirty years I was a dedicated professional drinker. Not a good one, but persistent. Four lost jobs, a first marriage, whole weekends gone. Two ultimatums from my wife, and a Christmas party I don't remember one minute of.</p>
+        <p>I tried white-knuckling it. Six miserable months, undone by one beach vacation.</p>
+        <p>All I wanted was control. Two drinks and done. Instead I got not wanting it at all, plus some help from a direction I never saw coming.</p>
+        <p>Now I still go to the fish fry, the tailgate, and the bar on a Saturday night. Alcohol just doesn't come up anymore. Kind of like bananas. No white-knuckling. No missing it.</p>
+        <p>This isn't a program. It's my story. Where you land, a Wisconsin few or none at all, is your call.</p>
+      </div>
+    </section>
+
+    <section class="for-you">
+      <div class="wrap">
+        <h2 class="section-title">This book is for you if</h2>
+        <ul>
+          <li>You want to drink less, or maybe not at all, and you're not sure which yet</li>
+          <li>You've tried gritting your teeth through it and it didn't stick</li>
+          <li>You don't want to give up the fun, the friends, or the Friday fish fry</li>
+          <li>You like your honesty with a side of laughs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="quotes">
+      <div class="wrap quote-grid">
+        <figure class="quote-card">
+          <blockquote><p>"Alcohol has no benefits."</p></blockquote>
+        </figure>
+        <figure class="quote-card">
+          <blockquote><p>"Freedom is better than control."</p></blockquote>
+        </figure>
+      </div>
+    </section>
+
+    <section class="release" id="preorder">
+      <div class="wrap">
+        <div class="release-card">
+          <h2 class="section-title">Get the book</h2>
+          <p class="date">Ebook and paperback &middot; Tuesday, January 5, 2027</p>
+          <p>Kindle pre-order is open now. The button below takes you straight to Amazon.</p>
+          <div class="prices">
+            <div class="price-pill">Ebook <span>$3.99</span></div>
+            <div class="price-pill">Paperback <span>$9.99</span></div>
+          </div>
+          <!-- PREORDER_LINK: swap href="#preorder" for the live Amazon URL -->
+          <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HQFQPNTW" target="_blank" rel="noopener">Pre-order on Amazon</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="author" id="author">
+      <div class="wrap author-grid">
+        <div class="author-mark" aria-hidden="true">
+          <img src="assets/author-mark.png" width="110" height="110" alt="Brett Allen Bird mark">
+        </div>
+        <div>
+          <h2 class="section-title">About the Author</h2>
+          <p><strong>Brett Allen Bird</strong> spent thirty years in a complicated and very public relationship with alcohol. He set out to drink like a normal person and ended up not wanting to drink at all, with some help from a faith he never saw coming. He lives in Wisconsin with his wife, still hits the fish fry and the bar most weekends, and just doesn't drink anymore. He also doesn't eat bananas. That's a different story. Actually, it's the same story. <em>Drink Soberishly</em> is his first book.</p>
+          <div class="links">
+            <a class="chip" href="https://x.com/brettallenbird" rel="noopener" target="_blank">Follow on X</a>
+            <a class="chip alt" href="mailto:setfreedailyfaith@gmail.com">Email Brett</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="wrap">
+        <h2 class="section-title">Free daily notes at Set Free Daily</h2>
+        <p>Short, honest notes on freedom from the pull of alcohol. Same voice as the book. No lectures. Sign up free on Substack.</p>
+        <a class="btn btn-primary" href="https://setfreedaily.substack.com" rel="noopener" target="_blank">Read Set Free Daily</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Brett Allen Bird. All rights reserved.</p>
+      <p class="fine">
+        <a href="https://drinksoberishly.com">drinksoberishly.com</a>
+        <a href="https://setfreedaily.substack.com" rel="noopener" target="_blank">Set Free Daily</a>
+        <a href="https://x.com/brettallenbird" rel="noopener" target="_blank">@brettallenbird</a>
+        <a href="mailto:setfreedailyfaith@gmail.com">setfreedailyfaith@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
