@@ -23,6 +23,7 @@ These pages use `noindex`. This repo has no sitemap. If you add one later, leave
 - booksprout: https://drinksoberishly.com/go/booksprout
 - xbio: https://drinksoberishly.com/go/xbio
 - substack: https://drinksoberishly.com/go/substack
+- artofrecovery: https://drinksoberishly.com/go/artofrecovery
 
 ## Add a slug
 
