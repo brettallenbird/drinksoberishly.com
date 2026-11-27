@@ -24,6 +24,7 @@ These pages use `noindex`. This repo has no sitemap. If you add one later, leave
 - xbio: https://drinksoberishly.com/go/xbio
 - substack: https://drinksoberishly.com/go/substack
 - artofrecovery: https://drinksoberishly.com/go/artofrecovery
+- openlysober: https://drinksoberishly.com/go/openlysober
 
 ## Add a slug
 
